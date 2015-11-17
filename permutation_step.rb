@@ -9,7 +9,6 @@ def PermutationStep(num)
 	permutation_array.clear
 	index = final_array.index(num.to_s)
 	p final_array[index + 1]
-         
 end
 
 
