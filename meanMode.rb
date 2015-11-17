@@ -10,7 +10,6 @@ end
 
 def mode(array)
 	mode_array = array.inject({}) { |k, v| k[v] = array.count(v); k}
-	p mode_array
 	mode_array.select { |k,v| v == mode_array.values.max }.keys
 end
 
