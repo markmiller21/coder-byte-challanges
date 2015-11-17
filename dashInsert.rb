@@ -1,23 +1,15 @@
 def DashInsert(str)
-	num_array = str.to_s.split('')
-	last_odd = false
-	result_string = ""
-	num_array.each do |current_num|
-		current_num = current_num.to_i
-		if current_num % 2 == 1
-			if last_odd == true
-				result = "-" + current_num.to_s
-				result_string += result
-			else
-				last_odd = true
-				result_string += current_num.to_s
-			end
-		else
-			last_odd = false
-			result_string += current_num.to_s
-		end
+	str = str.to_s
+	x = str.length
+	while x > 0
+		str.insert(x,"-") if both_odd(str[x].to_i, str[x-1].to_i)
+		x -= 1
 	end
-	p result_string
+	p str
+end
+
+def both_odd(num1, num2)
+	(num1 % 2 == 1) && (num2 % 2 == 1)
 end
 
 DashInsert(56730)
