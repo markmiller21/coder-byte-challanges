@@ -3,9 +3,10 @@ def VowelCount(str)
   letter_array = str.split('')
   count = 0
   letter_array.each do |letter|
-    if vowels.include? letter
-      count += 1
-    end
+    count += 1 if vowels.include? letter
   end
+  p count
   return count      
 end
+
+VowelCount("hello")
