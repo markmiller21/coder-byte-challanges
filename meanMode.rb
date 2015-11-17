@@ -1,11 +1,7 @@
 def MeanMode(arr)
   mean_value = mean(arr)
   mode_value = mode(arr)
-  if mode_value[0] == mean_value
-  	return 1
-  else
-  	return 0 
-  end         
+  return mean_value if mode_value[0] == mean_value     
 end
 
 def mean(array)
